@@ -1,0 +1,30 @@
+{
+  "name": "bootstraptemplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "allcss": "sass css/bootstrap.scss css/bootstrap.css && postcss --use autoprefixer -r css/bootstrap.css css/bootstrap.css && css-minify -f css/bootstrap.css -o css",
+    "rolmin": "rollup js/main.js --file ./js/bundle.js --format cjs && terser ./js/bundle.js -c -m -o ./js/bundle.min.js",
+    "dev": "npm-run-all allcss rolmin",
+    "css-purge-min": "purgecss --keyframes --css css/bootstrap.min.css --content ./*.html \"node_modules/bootstrap/js/dist/{util,modal}.js\" --output css/"
+  },
+  "author": "Tom Vanhoutte",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "5.2.2",
+    "sass": "^1.56.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "css-minify": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0",
+    "purgecss": "^5.0.0",
+    "rollup": "^3.2.5",
+    "terser": "^5.13.1",
+    "sass": "^1.48.0"
+  }
+}

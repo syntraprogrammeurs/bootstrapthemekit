@@ -1,0 +1,24 @@
+$primary:#00FF00;
+$secondary:#23fff5;
+$danger:#000;
+
+$btn-border-radius: 50%;
+$color:orange;
+.m-6{
+    margin:41px;
+}
+.m-7{
+  margin:100px;
+}
+.myimage{
+  background:url('../images/img.png') no-repeat;
+}
+@import "navbar";
+
+#testBtn{
+    font-size:16px;
+    &:hover{
+     font-size:32px;
+     cursor: pointer;
+    }
+}
