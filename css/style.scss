@@ -1,3 +1,5 @@
+/** EIGEN CSS **/
+/* eigen variabelen, id's en classes */
 $primary:#00FF00;
 $secondary:#23fff5;
 $danger:#000;
@@ -13,12 +15,8 @@ $color:orange;
 .myimage{
   background:url('../images/img.png') no-repeat;
 }
+/**PARTIALS**/
+/* _navbar.scss*/
 @import "navbar";
 
-#testBtn{
-    font-size:16px;
-    &:hover{
-     font-size:32px;
-     cursor: pointer;
-    }
-}
+
